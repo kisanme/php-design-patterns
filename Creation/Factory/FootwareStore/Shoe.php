@@ -16,7 +16,7 @@ class Shoe implements Product
     }
     
     public function assembleProduct(): string {
-        return "Assembling " . implode(', ', $this->rawMaterials);
+        return "Assembling Shoe with " . implode(', ', $this->rawMaterials);
     }
     
     public function shipProduct(): string {

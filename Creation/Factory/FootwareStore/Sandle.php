@@ -13,14 +13,14 @@ class Sandle implements Product
     ];
     
     public function fetchRawMaterials(): string {
-        return "Fetching " . implode($this->rawMaterials, ", ");
+        return "Fetching " . implode(", ", $this->rawMaterials);
     }
     
     public function assembleProduct(): string {
-        return "Assembling Sandle with " . implode($this->rawMaterials, ", ");
+        return "Assembling Sandle with " . implode(", ", $this->rawMaterials);
     }
     
     public function shipProduct(): string {
-        return "Shipping Sandle";
+        return "Ship the sandle";
     }
 }

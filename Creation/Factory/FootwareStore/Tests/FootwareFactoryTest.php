@@ -25,35 +25,4 @@ class FootwareFactoryTest extends TestCase
 
         $this->assertInstanceOf(Sandle::class, $sandle);
     }
-
-    public function testShoeCreation()
-    {
-        $shoe = (new ShoeShipper)->createProduct();
-        $rawMaterials = $shoe->fetchRawMaterials();
-        $this->assertEquals($rawMaterials, "Fetching Sole, Lace, Paint, Cloth");
-    }
-
-    public function testShoeAssembly()
-    {
-        $shoe = (new ShoeShipper)->createProduct();
-        $assembly = $shoe->assembleProduct();
-        $this->assertEquals($assembly, "Assembling Sole, Lace, Paint, Cloth");
-    }
-
-    public function testShoeShipping()
-    {
-        $shoe = (new ShoeShipper)->createProduct();
-        $shipment = $shoe->shipProduct();
-        $this->assertEquals($shipment, "Ship the shoe");
-    }
-
-    public function testCompositeShoeShipping()
-    {
-        $output = "Fetching Sole, Lace, Paint, Cloth\n";
-        $output .= "Assembling Sole, Lace, Paint, Cloth\n";
-        $output .= "Ship the shoe\n"; 
-        $this->expectOutputString($output);
-
-        $shoe = (new ShoeShipper)->produceAndShipProduct();
-    }
 }
