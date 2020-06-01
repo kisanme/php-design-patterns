@@ -1,0 +1,30 @@
+{
+    "name": "kisanme/design-patterns",
+    "description": "PHP application with design patterns and examples",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nasik",
+            "email": "nasik2ms@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.1",
+        "vimeo/psalm": "^3.11"
+    },
+    "scripts": {
+        "factory": [
+            "@php Creation/Factory/FootwareStore/Execution.php"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Creation\\": "Creation/",
+            "Behaviour\\": "Behaviour/",
+            "Structure\\": "Structure/",
+            "Other\\": "Other/"
+        }
+    }
+}
