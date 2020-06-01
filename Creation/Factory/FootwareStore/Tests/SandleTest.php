@@ -29,6 +29,15 @@ class SandleTest extends TestCase
         $this->assertEquals($shipment, "Ship the sandle");
     }
 
+    public function testCompositeSandleProduction()
+    {
+        $output = "Fetching Sole, Leather, Straps, Paint, Glue\n";
+        $output .= "Assembling Sandle with Sole, Leather, Straps, Paint, Glue\n";
+        $this->expectOutputString($output);
+
+        $sandle = (new SandleShipper)->produceProduct();
+    }
+
     public function testCompositeSandleShipping()
     {
         $output = "Fetching Sole, Leather, Straps, Paint, Glue\n";

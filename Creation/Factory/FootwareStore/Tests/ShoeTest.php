@@ -29,6 +29,15 @@ class ShoeTest extends TestCase
         $this->assertEquals($shipment, "Ship the shoe");
     }
 
+    public function testCompositeShoeProduction()
+    {
+        $output = "Fetching Sole, Lace, Paint, Cloth\n";
+        $output .= "Assembling Shoe with Sole, Lace, Paint, Cloth\n";
+        $this->expectOutputString($output);
+
+        $shoe = (new ShoeShipper)->produceProduct();
+    }
+
     public function testCompositeShoeShipping()
     {
         $output = "Fetching Sole, Lace, Paint, Cloth\n";
