@@ -4,6 +4,11 @@ namespace Structure\Decorator\DiscountedStore;
 
 class DiscountDecorator implements IDiscount
 {
+    /**
+     * @var IDiscount
+     */
+    private $discount;
+    
     public function __construct(IDiscount $discount)
     {
         $this->discount = $discount;
